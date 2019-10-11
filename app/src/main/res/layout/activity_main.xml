@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="8"
+    android:background="@drawable/bgcolor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="6dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/cartimv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/carttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/cartimv"
+                    android:fontFamily="Times new roman"
+                    android:textColor="#111111"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/carttextedit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/carttext"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Price Per Piece: "
+                    android:layout_toRightOf="@+id/cartimv"
+                    android:textColor="#111111"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/carttext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/carttext"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/carttextedit1"
+                    android:textColor="#111111"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/carttextedit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/carttext1"
+                    android:layout_marginLeft="20dp"
+                    android:text="Quantity: "
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/cartimv"
+                    android:textColor="#111111"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/carttext2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/carttext1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/carttextedit2"
+                    android:textColor="#111111"
+                    android:textSize="15dp" />
+
+                <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/carttext2"
+                    android:layout_marginStart="10dp"
+                    android:focusable="false"
+                    android:layout_marginTop="30dp"
+                    app:initialNumber="0"
+                    app:finalNumber="10"
+                    android:id="@+id/cartbutton"
+                    app:textSize="7dp">
+                </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="5dp"
+                    android:id="@+id/carttext3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Total Amount: "
+                    android:gravity="center"
+                    android:layout_below="@+id/carttext2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/edittextdesign"
+                    android:layout_toRightOf="@+id/cartbutton"
+                    android:textColor="#111111"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</LinearLayout>
